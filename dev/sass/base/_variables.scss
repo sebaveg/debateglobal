@@ -1,0 +1,102 @@
+
+/*------------------------------------*\
+    $COLORES
+\*------------------------------------*/
+
+/*Escala de grises*/
+$black 			: rgb(0,0,0);
+$darkergrey 	: lighten(black, 20%);
+$darkgrey 		: lighten(black, 30%);
+$grey 			: lighten(black, 50%);
+$lightgrey 		: lighten(black, 70%);
+$lightergrey 	: lighten(black, 80%);
+$white 			: rgb(255,255,255);
+
+/*Colores principales*/
+$amatista 		: #6F49A6;
+$darkamatista	: darken($amatista, 20%);
+$darkeramatista : darken($amatista, 40%);
+$lightamatista 	: lighten($amatista, 20%);
+$lighteramatista: lighten($amatista, 40%);
+
+/*Redes sociales*/
+$fb			: #4464B2;
+$tw			: #28A9E0;
+$google 	: #DA4735;
+$youtube 	: #FF3333;
+
+/*Colores amigables*/
+/*$amarillo    : #FBBC05;*
+$rojo        : darken(tomato,10);
+$verde       : #66A756;
+
+/*Colores del layout*/
+$bg-body    : #fafafa;
+$bg-header  : #fff;
+$bg-footer  : #333;
+
+//Colores de los puntos de vista hasta 5 columnas
+//Colores del arcoiris empezando por violeta
+$violeta: #6F49A6;
+$indigo: indigo;
+$celeste: #2980b9;
+$verde: #27ae60;
+$amarillo: #f1c40f;
+
+
+
+
+
+/*------------------------------------*\
+    $DIR
+\*------------------------------------*/
+
+$image-dir : "img";
+
+ //Use: background-image:url("image-dir/btn.jpg");
+
+$font-dir : "../fonts";
+/*
+ *   src:url('font-dir/icomoon.eot');
+ *   src:url('font-dir/icomoon.eot?#iefix') format('embedded-opentype'),
+ *   url('font-dir/icomoon.woff') format('woff'),
+ *   url('font-dir/icomoon.ttf') format('truetype'),
+ *   url('font-dir/icomoon.svg#icomoon') format('svg');
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Definimos elementos constantes del layout
+ */
+$baselineheight  :    1em;
+$radius          :    3px;
+$hovertransition :    .3s;
+$animationtime   :    .8s;
+
+// Header
+$heightheader : 50px;
+
+
+
+
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+$basefont : 'Open Sans', sans-serif;
+$altfont : Georgia, Times, "Times New Roman";
+$codefont : "Courier New", monospace;
+
+$altlineheight : 1.35em;

@@ -1,0 +1,34 @@
+// RWD Bases
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #222;
+  margin      : 0;
+  font-family : sans-serif;
+}
+
+// Imágenes responsive
+img {
+  max-width : 100%;
+  height    : auto;
+}
+
+a {
+  text-decoration : none;
+  &:hover { text-decoration : none }
+}
+ul{
+  margin: 0;
+  padding-left: 0;
+}
+li{
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}

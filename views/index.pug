@@ -1,0 +1,32 @@
+doctype html
+html(lang='es')
+  head
+    include includes/head
+  body
+    include includes/header
+    
+    section.bg-portada.body_section
+      .ed-container.portada
+        .ed-item.m-50.main-center
+          h2 Un lugar para tu perspectiva
+          .dibujo
+            img(src='img/portada.png', alt='Imagen de portada')
+          h3 Comparte tu visión de las cosas con todos
+          
+        .ed-item.m-50.main-center
+          form.form_reg(action='signup' method='POST')
+            div
+              label(for='username') Nombre de usuario
+              input(type='text', id='username', name='username' placeholder='Ingrese nombre de usuario')
+            div
+              label(for='username') Email
+              input(type='text', id='email', name='email' placeholder='Tu correo electrónico')
+            div
+              label(for='username') Contraseña
+              input(type='password', id='pass', name='pass' placeholder='Ingrese contraseña')
+            div
+              input(type='submit' value='Registrarse')
+            p Haciendo click en 'Registrarse', usted acepta nuestros <a href='#'>terminos y condiciones</a> y <a href='#'>política de privacidad.</a> Te enviaremos un mail para confirmar tu correo.
+    
+    
+    include includes/footer

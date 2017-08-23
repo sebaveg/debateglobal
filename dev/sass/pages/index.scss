@@ -1,0 +1,63 @@
+.bg-portada{
+  background-color: rgba($violeta, .2);
+  width: 100%;
+}
+.portada{
+  padding: 1em 0;
+  h2{
+    margin-bottom: 0;
+    text-align: center;
+  }
+  h3{
+    margin-top: 0;
+    text-align: center;
+  }
+  .dibujo{
+    height: 350px;
+    width: 350px;
+  }
+}
+
+.form_reg{
+  border: 1px solid #777;
+  border-radius: 4px;
+  background-color: #F3F3F3;
+  padding: 1em 1.5em 0 1.5em;
+  width: 380px;
+  label{
+    display: block;
+  }
+  input{
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 1.1em;
+    margin-bottom: 1.7em;
+    margin-top: 5px;
+    padding: .4em 1em;
+    width: 100%;
+  }
+  button{
+    color: #fff;
+    cursor: pointer;
+    background-color: #28a745;
+    background-image: -webkit-linear-gradient(right, #34d058 0%, #28a745 90%);
+    background-image: -o-linear-gradient(right, #34d058 0%, #28a745 90%);
+    background-image: linear-gradient(to left, #34d058 0%, #28a745 90%);
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: .5em 1em;
+    width: 100%;
+    &:hover{
+      background-color: #28a745;
+      background-image: -webkit-linear-gradient(right, #34d058 0%, #28a745 50%);
+      background-image: -o-linear-gradient(right, #34d058 0%, #28a745 50%);
+      background-image: linear-gradient(to left, #34d058 0%, #28a745 50%);
+    }
+  }
+  p{
+    color: #555;
+    font-size: .9em;
+  }
+}

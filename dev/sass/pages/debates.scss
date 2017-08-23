@@ -1,0 +1,108 @@
+.debate-box{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 6px -2px $violeta;
+  margin-top: 2em;
+  padding: 1em 0;
+  @include to(m){
+    margin-bottom: .5em;
+  };
+  a{
+    color: $violeta;
+  }
+  &_title{
+    display: block;
+    font-size: 1.1em;
+    margin: 0 0 .5em 0;
+    h3{
+      color: #222;
+      &:hover{
+        text-shadow: 1px 1px 2px $lightgrey;
+      }
+    }
+    @include from(m){
+      font-size: 1.4em;
+    };
+    @include from(l){
+      font-size: 1.7em;
+    };
+  }
+  &_img{
+    height: 200px;
+    max-width: 350px;
+    width: 100%;
+  }
+  &_titlelist{
+    font-size: .9em;
+    margin-top: .7em;
+    @include from(l){
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+  &_list{
+    a{
+      background-color: #dcdcec;
+      &:hover{
+        background-color: darken(#dcdcec,5);
+      }
+    }
+    &-pdv li,
+    &-places li,
+    &-categories li{
+      display: inline-block;
+      font-size: .8em;
+      margin-bottom: .5em;
+      margin-right: 5px;
+      a{
+        cursor: pointer;
+        display: block;
+        padding: .1em .6em;
+      }
+    }
+  }
+  .ver-mas{
+    background: #fff;
+    font-size: .9em;
+    margin-left: .5em;
+    position: relative;
+    top: 5px;
+    &:hover{
+      background-color: #fff;
+    }
+  }
+  &_description{
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  &_maininfo{
+    display: flex;
+    margin-top: 1.5em;
+    li{
+      flex: auto;
+      text-align: center;
+    }
+  }
+  &_footer{
+    display: flex;
+    font-size: .9em;
+    justify-content: space-between;
+    margin-top: 1.5em;
+  }
+  .cant-char{
+    font-size: .9em;
+    margin-top: 1.5em;
+    &_text{
+      font-size: 1.2em;
+      margin-right: 1em;
+    }
+    strong{
+      font-size: 1.1em;
+    }
+  }
+}
+
+aside{
+  background-color: #aaa;
+}

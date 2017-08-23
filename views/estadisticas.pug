@@ -1,0 +1,102 @@
+doctype hmtl
+html(lang='es')
+  head
+    include includes/head
+    
+    <!--Load the AJAX API Google Charts-->
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type='text/javascript' src='js/googlecharts.js'></script>
+    
+  body
+    include includes/header
+    
+    section.body_section
+      .ed-container
+        .ed-item.m-50.main-center.cross-center.est
+          //- Hay tres tipos de formulario de encuesta
+          //- 1 - De único input de tipo numérico
+          //- 2 - De inputs radio
+          //- 3 - De inputs checkbox
+          //- Descomentar el que se visualizará
+          
+          form.form-est(action='')
+            label(for='campo1')
+              h1.form-est_title ¿Cuántas horas dormis por día?
+            input(type='number', id='campo1')
+          
+          //- form(action='').form-est
+          //-   h1 ¿Qué tipo de dieta lleva?
+          //-   input(type='radio' name='form-est' id='opcion1' value='omnivora')
+          //-   label(for='opcion1') Omnivora
+          //-   <br/>
+          //-   input(type='radio' name='form-est' id='opcion2' value='vegetariana')
+          //-   label(for='opcion2') Vegetariana
+          //-   <br/>
+          //-   input(type='radio' name='form-est' id='opcion3' value='vegana')
+          //-   label(for='opcion3') Vegana
+          //-   <br/>
+          //- 
+          //- from(action='').form-est
+          //-   h1 ¿Qué tecnologías tiene en su hogar?
+          //-   input(type='checkbox' name='form-est' id='opcion1' value='celular')
+          //-   label(for='opcion1') Celular
+          //-   <br/>
+          //-   input(type='checkbox' name='form-est' id='opcion2' value='notebook')
+          //-   label(for='opcion2') Notebook
+          //-   <br/>
+          //-   input(type='checkbox' name='form-est' id='opcion3' value='tablet')
+          //-   label(for='opcion3') Tablet
+          //-   <br/>
+          //-   input(type='checkbox' name='form-est' id='opcion4' value='smarttv')
+          //-   label(for='opcion4') Smart tv
+            
+        .ed-item.m-50.main-center.cross-center
+          //- h2 Responda la encuesta para ver su resultado global
+          <!--Div that will hold the pie chart-->
+          <div id='chart_div' class='chart_div'></div>
+          .ed-container.est_comentarios
+            .ed-item.m-15
+              img(src='img/yo.jpg', alt='')
+            .ed-item.m-85
+              form.est_comentarios_form(action='')
+                textarea
+                  
+      .ed-container
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+        .ed-item
+          h1 Hola mundo!
+          
+    include includes/footer

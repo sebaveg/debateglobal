@@ -1,0 +1,181 @@
+.debate{
+  &_title{
+    font-size: 3em;
+    padding: .5em 0;
+  }
+  &_infoprincipal{
+    display: flex;
+    font-size: 1.5em;
+    margin: .5em 0;
+    li{
+      flex: auto;
+      text-align: center;
+    }
+  }
+  &_img{
+    box-shadow: 0 0 0 2px $grey;
+    float: left;
+  }
+  &_description{
+    line-height: 1.5;
+  }
+  &_infosecundaria{
+    border-top: 1px ridge #333;
+    line-height: 2;
+    margin-top: 1em;
+    padding-top: 1em;
+
+  }
+  .car-num{
+    font-size: 1.5em;
+  }
+  .puntos_debate{
+    bottom: 1.5em;
+    color: $verde;
+    font-weight: bold;
+    font-size: 2em;
+    position: relative;
+    right: 0;
+  }
+  .manitos{
+    position: absolute;
+  }
+  .icon-thumbs-up, .icon-thumbs-down{
+		color: #555;
+		font-size: 1.3em;
+	}
+}
+
+
+.pdvs{
+  border-top: 1px ridge #333;
+  padding: 1em 2em;
+  .ed-container{
+    max-width: 200%;
+    width: 200%;
+  }
+}
+.pdv{
+  border-left: 2px solid $grey;
+  &_title{
+    margin: 0;
+    padding: .5em 0;
+    background-color: darken($bg-body, 3%);
+    text-align: center;
+  }
+  &_info{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 0;
+    margin-bottom: .5em;
+  }
+  .btn-mostrarmas{
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: .5em 0;
+    width: 100%;
+  }
+}
+
+// A cada punto de vista le pone un color
+$list: $violeta, $celeste, $verde, $amarillo, red;
+@for $i from 1 through 5{
+  $color-actual: nth($list,$i);
+  .pdv:nth-child(#{$i}){
+    color: $color-actual;
+    .pdv_title{
+      background-color: lighten($color-actual, 45%);
+      border: 2px solid $color-actual;
+      color: $color-actual;
+    }
+    .comentario{
+      box-shadow: 0 0 5px $color-actual;
+      &_head_col-d{
+        color: $color-actual;
+      }
+    }
+    a{
+      color: $color-actual;
+    }
+    .btn-mostrarmas{
+      background-color: rgba($color-actual,.7);
+      &:hover{
+        background-color: darken($color-actual,5%);
+      }
+    }
+    .icon-user:before{
+      color: $color-actual;
+    }
+  }
+}
+
+.comentario{
+  background-color: #fff;
+  border-radius: 3px;
+  color: #222;
+  margin-bottom: 6px;
+  padding: .5em;
+  &_head{
+    display: flex;
+    &_col-i{
+      width: 20%;
+    }
+    &_col-m{
+      padding: 0 .5em;
+      width: 80%;
+      .icon-user:before{
+        font-size: .9em;
+        transform: translateY(-1px);
+      }
+      span{
+        color: #333;
+        font-size: .9em;
+        font-weight: normal;
+      }
+      h4{
+        color: steelblue;
+        margin: 0;
+        &:before{
+          color: #333;
+        }
+        a{
+          color: #333;
+          padding-right: .5em;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &_col-d{
+      text-align: right;
+      width: 20%;
+    }
+  }
+  &_main{
+    p{
+      margin: 0 0 .5em 0;
+      padding-left: .5em;
+    }
+  }
+  &_foot{
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+  }
+}
+
+.u-scrollContainer{
+  overflow: auto;
+  // white-space: nowrap;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+
+  &-itemContainer{
+    width: 18%;
+  }
+}

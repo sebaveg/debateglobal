@@ -1,0 +1,77 @@
+doctype html
+html(lang='es')
+  head
+    include includes/head
+  body
+    include includes/header
+    
+    section.ed-container.body_section
+      
+      section.ed-item.l-70
+        
+        header.filter
+          button.btn-filter Filtro
+        
+        main.debates
+          
+          - for(var i=0; i<5; i++)
+            //- Caja del debate
+            .debate-box
+              .ed-container
+                header.ed-item
+                  a.debate-box_title(href='debate.html')
+                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iure labore rem doloremque, velit rerum.
+                .ed-item.m-40
+                  img.debate-box_img(src='img/negrita.jpg', alt='')
+                .ed-item.m-60.debate-box_list
+                  h5.debate-box_titlelist Puntos de vista
+                  ul.debate-box_list-pdv
+                    li: a(href='#') Socialismo
+                    li: a(href='#') Capitalismo
+                    li: a(href='#') Comunismo
+                    li: a(href='#') Izquierda
+                    li: a(href='#') Derecha
+                    li: a(href='#') Partido corrupto
+                    li: a(href='#') Lo que vos quieras
+                    a.ver-mas(href='#') Mas...
+                  h5.debate-box_titlelist Región
+                  ul.debate-box_list-places
+                    li: a(href='#') Argentina
+                    li: a(href='#') Chile
+                    li: a(href='#') Brasil
+                    li: a(href='#') Uruguay
+                  h5.debate-box_titlelist Categorías
+                  ul.debate-box_list-categories
+                    li: a(href='#') Medicina
+                    li: a(href='#') Política
+                    li: a(href='#') Religión
+                    li: a(href='#') Otra categoría
+                    li: a(href='#') Otra categría 2
+                    a.ver-mas(href='#') Mas...
+                .ed-item
+                  p.debate-box_description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .ed-item.m-40
+                  ul.debate-box_maininfo
+                    li
+                      strong 123<br/>
+                      span grupos
+                    li
+                      strong 500<br/>
+                      span usuarios
+                    li
+                      strong +15<br/>
+                      span votos
+                .ed-item.m-60.main-center.cross-center
+                  .cant-char
+                    span.cant-char__text Cantidad de caracteres permitidos:
+                    span <strong>100</strong> a <strong>500</strong>
+                footer.ed.item.debate-box_footer
+                  .info-user
+                    span Abierto por <a href='perfil.html'>seba</a>
+                  .info-date
+                    span 13:17 15-Feb-2016
+                    
+      aside.ed-item.l-30
+        h5 ASIDE
+    
+    include includes/footer

@@ -1,0 +1,140 @@
+//Reset
+@import "base/reset";
+
+
+//EDgrid es una librería CSS para construir layouts con Responsive Web Design
+$cssCore: false;
+@import "../../node_modules/ed-grid/ed-grid";
+
+//Variables
+@import "base/variables";
+
+//Paginas
+@import "pages/index";
+@import "pages/debates";
+@import "pages/debate";
+@import "pages/estadisticas";
+
+body{
+  background-color: $bg-body;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+header.body_header{
+  border-bottom: 1px solid lightgrey;
+  background-color: #fff;
+  height: $heightheader;
+  line-height: $heightheader;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+header.body_header + section.body_section{
+  margin-top: $heightheader;
+  width: 100%;
+}
+footer.body_footer{
+  align-self: flex-end;
+  background-color: $bg-footer;
+  color: white;
+  margin-top: 2rem;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.body_header{
+  .ed-container{
+    height: $heightheader;
+    @include crossCenter;
+    .container_menu{
+      @include mainEnd;
+      .icon-menu{
+        color: $darkgrey;
+        cursor: pointer;
+        padding: .5em 1em;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+.logo{
+  color: indigo;
+  margin: 0;
+}
+
+.main-menu{
+  display: flex;
+  margin: 0;
+  padding:0;
+  text-align: center;
+  @include crossCenter;
+  li{
+    a{
+      display: block;
+      color: $violeta;
+      font-weight: bold;
+    }
+  }
+  &>li:last-child{
+    background-color: #28a745;
+    background-image: -webkit-linear-gradient(right, #34d058 0%, #28a745 90%);
+    background-image: -o-linear-gradient(right, #34d058 0%, #28a745 90%);
+    background-image: linear-gradient(to left, #34d058 0%, #28a745 90%);
+    &:hover{
+      background-color: darken($verde, 10%);
+    }
+  }
+  @include from(l){
+    li{
+      transition: 100ms;
+      &:hover{
+        border-top: 5px solid green;
+      }
+      margin-left: 1.5em;
+      a{
+        line-height: $heightheader;
+      }
+    }
+    &>li:last-child{
+      border-bottom: 2px solid darken($verde, 10%);
+      border-radius: 4px;
+      margin-left: 3em;
+      padding: 0 1em;
+      &:hover{
+        border-top: none;
+        text-shadow: 0 0 1px white;
+      }
+      a{
+        color: white;
+        font-weight: bold;
+        line-height: $heightheader - (14px);
+        &:hover{
+          transform: translate(0,1px);
+        }
+      }
+    }
+  };
+  @include to(l){
+    background-color: lighten(indigo,20%);
+    display: block;
+    left: 0;
+    line-height: 3em;
+    position: absolute;
+    top: $heightheader;
+    width: 100%;
+    li{
+      border-bottom: 1px solid lighten(indigo, 10%);
+      border-top: 1px solid darken(indigo, 10%);
+      list-style: none;
+      &:hover{
+        background-color: lighten(indigo,10%);
+        text-shadow: 0 0 1px white;
+      }
+      a{
+        color: white;
+        font-weight: bold;
+      }
+    }
+  };
+}

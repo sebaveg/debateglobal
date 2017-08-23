@@ -1,0 +1,33 @@
+{
+  "name": "debateglobal",
+  "version": "0.1.0",
+  "description": "Debateglobal es un sitio que une a las personas y sociedades de este mundo.",
+  "main": "server.js",
+  "author": "Sebastian Cardoso Castillo (http://sebastiancardoso.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "body-parser": "~1.17.1",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
+    "formidable": "^1.1.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "ed-grid": "^2.1.1",
+    "express": "^4.15.4",
+    "jquery": "^3.2.1",
+    "pug": "^2.0.0-rc.3"
+  },
+  "scripts": {
+    "build-js": "browserify dev/js/googlecharts.js dev/js/script.js > public/app.js",
+    "start": "nodemon server.js"
+  }
+}
